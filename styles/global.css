@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
