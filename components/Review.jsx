@@ -48,12 +48,14 @@ const Review = () => {
 
     const [selectedPraises, setSelectedPraises] = useState([]);
     const handlePraiseClick = (id) => {
+        
         if (selectedPraises.includes(id)) {
             setSelectedPraises((prevSelected) => prevSelected.filter((prevId) => prevId !== id));
         } else {
             setSelectedPraises((prevSelected) => [...prevSelected, id]);
         }
     };
+    
 
 
     return (
@@ -100,7 +102,7 @@ const Review = () => {
                 <div className="text-md  font-sans py-4 flex gap-2 ">
                     {
                         praise.map((p) => {
-                            return <span key={p.id} className={`py-2 px-3 bg-[#dddfe1] rounded-3xl transition ease-in-out delay-150  hover:bg-[#90EE90] duration-300 cursor-pointer ${selectedPraises.includes(p.id) ? 'bg-[#90EE90]' : 'bg-[#dddfe1]'} `}
+                            return <span key={p.id} className={`py-2 px-3  rounded-3xl transition ease-in-out delay-150  hover:bg-[#90EE90] duration-300 cursor-pointer ${selectedPraises.includes(p.id) ? 'bg-[#90EE90]' : 'bg-[#dddfe1]'} `}
                                 onClick={() => handlePraiseClick(p.id)}
                             >{p.praise}</span>
                         })
